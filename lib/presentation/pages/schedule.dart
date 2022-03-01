@@ -11,7 +11,7 @@ class SchedulePage extends StatelessWidget{
           title: const Text('Расписание'),
           backgroundColor: DarkThemeColors.background01
       ),
-      backgroundColor: DarkThemeColors.background03,
+      backgroundColor: DarkThemeColors.background02,
     );
   }
 }

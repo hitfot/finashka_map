@@ -70,9 +70,9 @@ class _PagesState extends State<Pages> {
           Icon(Icons.article, size: 30, color: DarkThemeColors.secondary,),
           Icon(Icons.map, size: 30, color: DarkThemeColors.secondary,),
         ],
-        color: DarkThemeColors.background01,
+        color: DarkThemeColors.background03,
         buttonBackgroundColor: Colors.transparent,
-        backgroundColor: DarkThemeColors.background03,
+        backgroundColor: DarkThemeColors.background02,
         animationCurve: Curves.easeInOut,
         animationDuration: const Duration(milliseconds: 600),
         onTap: (index) {
