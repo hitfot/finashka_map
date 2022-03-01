@@ -6,11 +6,11 @@ class SchedulePage extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      /*appBar: AppBar(
+    return Scaffold(
+      appBar: AppBar(
           title: const Text('Расписание'),
           backgroundColor: DarkThemeColors.background01
-      ),*/
+      ),
       backgroundColor: DarkThemeColors.background03,
     );
   }
