@@ -50,7 +50,7 @@ class Pages extends StatefulWidget {
 
 class _PagesState extends State<Pages> {
   int _activePage = 0;
-  final List<Widget> _tabItems = [const SchedulePage(), const MapPage()];
+  final List<Widget> _tabItems = [const SchedulePage(), MapPage(1)];
 
   _PagesState(int SelectedPage){
     _activePage = SelectedPage;
@@ -67,12 +67,12 @@ class _PagesState extends State<Pages> {
         index: _activePage,
         height: 60.0,
         items: const <Widget>[
-          Icon(Icons.article, size: 30, color: DarkThemeColors.secondary,),
-          Icon(Icons.map, size: 30, color: DarkThemeColors.secondary,),
+          Icon(Icons.article, size: 40, color: DarkThemeColors.secondary,),
+          Icon(Icons.map, size: 40, color: DarkThemeColors.secondary,),
         ],
         color: DarkThemeColors.background03,
         buttonBackgroundColor: Colors.transparent,
-        backgroundColor: DarkThemeColors.background02,
+        backgroundColor: DarkThemeColors.background03,
         animationCurve: Curves.easeInOut,
         animationDuration: const Duration(milliseconds: 600),
         onTap: (index) {
