@@ -13,7 +13,17 @@ class MapPage extends StatelessWidget{
           backgroundColor: DarkThemeColors.background01
       ),
       backgroundColor: DarkThemeColors.background02,
-      body: SvgPicture.asset('assets/image.svg')
-    );
+        body: Center(
+            child: Container(
+              height: 500,
+              width: 500,
+              color: Colors.transparent,
+              child: SvgPicture.asset(
+                  'assets/map/demo0.svg',
+                  color: DarkThemeColors.background03,
+              width: 100,),
+            )
+        )
+      );
   }
 }
