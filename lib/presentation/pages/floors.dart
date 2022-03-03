@@ -8,20 +8,20 @@ class Floor0 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-            title: const Text('Этаж 0'),
-            backgroundColor: DarkThemeColors.background01
-        ),
         backgroundColor: DarkThemeColors.background02,
         body: Center(
             child: Container(
               height: double.infinity,
               width: double.infinity,
               color: Colors.transparent,
-              child: SvgPicture.asset(
-                'assets/map/demo0.svg',
-                color: DarkThemeColors.background03,
-                width: 100,),
+              child: InteractiveViewer(
+                minScale: 0.5,
+                maxScale: 1.5,
+                child: SvgPicture.asset(
+                  'assets/map/demo0.svg',
+                  color: DarkThemeColors.background03,
+                  width: 100,),
+              )
             )
         )
     );

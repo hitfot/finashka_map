@@ -50,7 +50,7 @@ class Pages extends StatefulWidget {
 
 class _PagesState extends State<Pages> {
   int _activePage = 0;
-  final List<Widget> _tabItems = [const SchedulePage(), MapPage(1)];
+  final List<Widget> _tabItems = [const SchedulePage(), MapPage(0)];
 
   _PagesState(int SelectedPage){
     _activePage = SelectedPage;
@@ -72,7 +72,7 @@ class _PagesState extends State<Pages> {
         ],
         color: DarkThemeColors.background03,
         buttonBackgroundColor: Colors.transparent,
-        backgroundColor: DarkThemeColors.background03,
+        backgroundColor: DarkThemeColors.background02,
         animationCurve: Curves.easeInOut,
         animationDuration: const Duration(milliseconds: 600),
         onTap: (index) {

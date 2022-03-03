@@ -1,8 +1,8 @@
 import 'package:finashka_map/presentation/Icons/new_icons_icons.dart';
 import 'package:finashka_map/presentation/pages/floors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:finashka_map/presentation/colors.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class MapPage extends StatefulWidget {
   @override
@@ -18,41 +18,58 @@ class _MapPageState extends State<MapPage>{
   _MapPageState(int SelectedFloor){
     _activeFloor = SelectedFloor;
   }
-  final GlobalKey<CurvedNavigationBarState> _SecbottomNavigationKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: const Text('Карта'),
-          backgroundColor: DarkThemeColors.background01
-      ),
       backgroundColor: DarkThemeColors.background02,
-      bottomNavigationBar: CurvedNavigationBar(
-        key: _SecbottomNavigationKey,
-        index: _activeFloor,
-        height: 60.0,
-        items: const <Widget>[
-          Icon(NewIcons.number_square_zero_bold_svgrepo_com, size: 30, color: DarkThemeColors.primary,),
-          Icon(NewIcons.number_square_one_bold_svgrepo_com_1, size: 30, color: DarkThemeColors.primary,),
-          Icon(NewIcons.number_square_two_bold_svgrepo_com, size: 30, color: DarkThemeColors.primary,),
-          Icon(NewIcons.number_square_three_bold_svgrepo_com, size: 30, color: DarkThemeColors.primary,),
-          Icon(NewIcons.number_square_four_bold_svgrepo_com, size: 30, color: DarkThemeColors.primary,),
-          Icon(NewIcons.number_square_five_bold_svgrepo_com, size: 30, color: DarkThemeColors.primary,),
+      body: Row(
+        children: <Widget>[
+          NavigationRail(
+            backgroundColor: Colors.transparent,
+            selectedIndex: _activeFloor,
+            onDestinationSelected: (int index) {
+              setState(() {
+                _activeFloor = index;
+              });
+              },
+            minWidth: 50,
+            groupAlignment: 0,
+            destinations: const <NavigationRailDestination>[
+              NavigationRailDestination(
+                icon: Icon(NewIcons.number_square_zero_bold_svgrepo_com, color: DarkThemeColors.secondary,),
+                label: Text(''),
+              ),
+              NavigationRailDestination(
+                icon: Icon(NewIcons.number_square_one_bold_svgrepo_com_1, color: DarkThemeColors.secondary,),
+                label: Text(''),
+              ),
+              NavigationRailDestination(
+                icon: Icon(NewIcons.number_square_two_bold_svgrepo_com, color: DarkThemeColors.secondary,),
+                label: Text(''),
+              ),
+              NavigationRailDestination(
+                icon: Icon(NewIcons.number_square_three_bold_svgrepo_com, color: DarkThemeColors.secondary,),
+                label: Text(''),
+              ),
+              NavigationRailDestination(
+                icon: Icon(NewIcons.number_square_four_bold_svgrepo_com, color: DarkThemeColors.secondary,),
+                label: Text(''),
+              ),
+              NavigationRailDestination(
+                icon: Icon(NewIcons.number_square_five_bold_svgrepo_com, color: DarkThemeColors.secondary,),
+                label: Text(''),
+              ),
+            ],
+          ),
+          const VerticalDivider(thickness: 1, width: 1, color: DarkThemeColors.background02,),
+          Expanded(
+              child: Center(
+                child: _Floors[_activeFloor],
+              )
+          )
         ],
-        color: DarkThemeColors.background03,
-        buttonBackgroundColor: Colors.transparent,
-        backgroundColor: DarkThemeColors.background02,
-        animationCurve: Curves.easeInOut,
-        animationDuration: const Duration(milliseconds: 600),
-        onTap: (index) {
-          setState(() {
-            _activeFloor = index;
-          });
-        },
-        letIndexChange: (index) => true,
       ),
-      body: _Floors[_activeFloor],
     );
   }
 }
