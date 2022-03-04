@@ -70,7 +70,7 @@ class _PagesState extends State<Pages> {
           Icon(Icons.article, size: 40, color: DarkThemeColors.secondary,),
           Icon(Icons.map, size: 40, color: DarkThemeColors.secondary,),
         ],
-        color: DarkThemeColors.background03,
+        color: DarkThemeColors.background01,
         buttonBackgroundColor: Colors.transparent,
         backgroundColor: DarkThemeColors.background02,
         animationCurve: Curves.easeInOut,
