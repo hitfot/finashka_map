@@ -61,6 +61,7 @@ flutter:
 
   assets:
     - assets/map/demo0.svg
+    - assets/map/floor1.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

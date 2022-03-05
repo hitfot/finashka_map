@@ -13,7 +13,14 @@ class MapPage extends StatefulWidget {
   _MapPageState createState() => _MapPageState(SelectedFloor);
 }
 class _MapPageState extends State<MapPage>{
-  final List<Widget> _Floors = [const Floor0(), const Floor1(), const Floor2(), const Floor3(), const Floor4(), const Floor5()];
+  final List<Widget> _Floors = [
+    Floor('assets/map/demo0.svg'),
+    Floor('assets/map/floor1.svg'),
+    Floor('assets/map/floor1.svg'),
+    Floor('assets/map/floor1.svg'),
+    Floor('assets/map/floor1.svg'),
+    Floor('assets/map/floor1.svg')
+  ];
   int _activeFloor = 0;
   _MapPageState(int SelectedFloor){
     _activeFloor = SelectedFloor;
