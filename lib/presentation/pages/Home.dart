@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:finashka_map/presentation/colors.dart';
 import 'package:finashka_map/presentation/pages/map.dart';
-import 'package:finashka_map/presentation/pages/schedule.dart';
+import 'package:finashka_map/presentation/pages/shedule/schedule.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class HomePage extends StatelessWidget{
@@ -50,7 +50,7 @@ class Pages extends StatefulWidget {
 
 class _PagesState extends State<Pages> {
   int _activePage = 0;
-  final List<Widget> _tabItems = [const SchedulePage(), MapPage(0)];
+  final List<Widget> _tabItems = [SchedulePage(), MapPage(0)];
 
   _PagesState(int SelectedPage){
     _activePage = SelectedPage;
