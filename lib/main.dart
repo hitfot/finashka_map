@@ -3,12 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:finashka_map/presentation/colors.dart';
 import 'package:finashka_map/presentation/pages/map.dart';
-import 'package:finashka_map/presentation/pages/schedule.dart';
+import 'package:finashka_map/presentation/pages/shedule/schedule.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 Future<void> main() async{
+  void initFirebase() async{
+    WidgetsFlutterBinding.ensureInitialized();
+    await Firebase.initializeApp();
+  }
+
   runApp(const MaterialApp(
     home: HomePage(),
   ));
+
 }
 
 // class App extends StatelessWidget {

@@ -13,12 +13,12 @@ class MapPage extends StatefulWidget {
 }
 class _MapPageState extends State<MapPage>{
   final List<Widget> _Floors = [
-    Floor('assets/map/demo0.svg'),
-    Floor('assets/map/floor1.svg'),
-    Floor('assets/map/floor1.svg'),
-    Floor('assets/map/floor1.svg'),
-    Floor('assets/map/floor1.svg'),
-    Floor('assets/map/floor1.svg')
+    Floor('assets/map/ref_map/floor0.svg'),
+    Floor('assets/map/ref_map/floor1.svg'),
+    Floor('assets/map/ref_map/floor2.svg'),
+    Floor('assets/map/ref_map/floor3.svg'),
+    Floor('assets/map/ref_map/floor4.svg'),
+    Floor('assets/map/ref_map/floor5.svg')
   ];
   int _activeFloor = 0;
   _MapPageState(int SelectedFloor){
@@ -28,7 +28,7 @@ class _MapPageState extends State<MapPage>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: DarkThemeColors.background02,
+      backgroundColor: DarkThemeColors.background01,
       body: Row(
         children: <Widget>[
           NavigationRail(

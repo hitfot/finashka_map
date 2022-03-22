@@ -21,7 +21,7 @@ class Floor extends StatelessWidget {
               color: Colors.transparent,
               child: InteractiveViewer(
                 minScale: 0.5,
-                maxScale: 1.5,
+                maxScale: 5,
                 child: SvgPicture.asset(
                   assetfolder,
                   width: 100,),

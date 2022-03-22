@@ -38,6 +38,8 @@ dependencies:
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
+  cloud_firestore:
+  firebase_core:
   flutter_test:
     sdk: flutter
 
@@ -60,8 +62,12 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/map/demo0.svg
-    - assets/map/floor1.svg
+    - assets/map/ref_map/floor0.svg
+    - assets/map/ref_map/floor1.svg
+    - assets/map/ref_map/floor2.svg
+    - assets/map/ref_map/floor3.svg
+    - assets/map/ref_map/floor4.svg
+    - assets/map/ref_map/floor5.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
