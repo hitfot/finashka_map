@@ -30,6 +30,7 @@ class _MapPageState extends State<MapPage>{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: DarkThemeColors.background01,
+      //floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       floatingActionButton: SpeedDial(
         buttonSize: 50,
         backgroundColor: DarkThemeColors.secondary,
@@ -41,33 +42,37 @@ class _MapPageState extends State<MapPage>{
             backgroundColor: DarkThemeColors.background03,
             child: Icon(NewIcons.number_square_zero_bold_svgrepo_com, color: DarkThemeColors.secondary,),
             label: 'Нулевой этаж',
-            onTap: () => _activeFloor = 0,
+            onTap: () {setState(() {_activeFloor = 0;});},
           ),
           SpeedDialChild(
             backgroundColor: DarkThemeColors.background03,
             child: Icon(NewIcons.number_square_one_bold_svgrepo_com_1, color: DarkThemeColors.secondary,),
             label: 'Первый этаж',
-            onTap: () => _activeFloor = 1,
+            onTap: () {setState(() {_activeFloor = 1;});},
           ),
           SpeedDialChild(
             backgroundColor: DarkThemeColors.background03,
             child: Icon(NewIcons.number_square_two_bold_svgrepo_com, color: DarkThemeColors.secondary,),
             label: 'Второй этаж',
+            onTap: () {setState(() {_activeFloor = 2;});},
           ),
           SpeedDialChild(
             backgroundColor: DarkThemeColors.background03,
             child: Icon(NewIcons.number_square_three_bold_svgrepo_com, color: DarkThemeColors.secondary,),
             label: 'Третий этаж',
+            onTap: () {setState(() {_activeFloor = 3;});},
           ),
           SpeedDialChild(
             backgroundColor: DarkThemeColors.background03,
             child: Icon(NewIcons.number_square_four_bold_svgrepo_com, color: DarkThemeColors.secondary,),
             label: 'Четвертый этаж',
+            onTap: () {setState(() {_activeFloor = 4;});},
           ),
           SpeedDialChild(
             backgroundColor: DarkThemeColors.background03,
             child: Icon(NewIcons.number_square_five_bold_svgrepo_com, color: DarkThemeColors.secondary,),
             label: 'Пятый этаж',
+            onTap: () {setState(() {_activeFloor = 5;});},
           ),
         ],
       ),
