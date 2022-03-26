@@ -30,7 +30,6 @@ class _MapPageState extends State<MapPage>{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: DarkThemeColors.background01,
-      //floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       floatingActionButton: SpeedDial(
         buttonSize: 50,
         backgroundColor: DarkThemeColors.secondary,
@@ -78,44 +77,6 @@ class _MapPageState extends State<MapPage>{
       ),
       body: Row(
         children: <Widget>[
-          /*NavigationRail(
-            backgroundColor: Colors.transparent,
-            selectedIndex: _activeFloor,
-            onDestinationSelected: (int index) {
-              setState(() {
-                _activeFloor = index;
-              });
-              },
-            minWidth: 50,
-            groupAlignment: 0,
-            destinations: const <NavigationRailDestination>[
-              NavigationRailDestination(
-                icon: Icon(NewIcons.number_square_zero_bold_svgrepo_com, color: DarkThemeColors.secondary,),
-                label: Text(''),
-              ),
-              NavigationRailDestination(
-                icon: Icon(NewIcons.number_square_one_bold_svgrepo_com_1, color: DarkThemeColors.secondary,),
-                label: Text(''),
-              ),
-              NavigationRailDestination(
-                icon: Icon(NewIcons.number_square_three_bold_svgrepo_com, color: DarkThemeColors.secondary,),
-                label: Text(''),
-              ),
-              NavigationRailDestination(
-                icon: Icon(NewIcons.number_square_three_bold_svgrepo_com, color: DarkThemeColors.secondary,),
-                label: Text(''),
-              ),
-              NavigationRailDestination(
-                icon: Icon(NewIcons.number_square_four_bold_svgrepo_com, color: DarkThemeColors.secondary,),
-                label: Text(''),
-              ),
-              NavigationRailDestination(
-                icon: Icon(NewIcons.number_square_five_bold_svgrepo_com, color: DarkThemeColors.secondary,),
-                label: Text(''),
-              ),
-            ],
-          ),*/
-          //const VerticalDivider(thickness: 1, width: 1, color: DarkThemeColors.background02,),
           Expanded(
               child: Center(
                 child: _Floors[_activeFloor],
