@@ -25,10 +25,11 @@ class LessonCard extends StatelessWidget{
     return Center(
       child: Card(
         child: Column(
-          children: const [
+          children: const <Widget> [
             ListTile(
-              leading: Text('8:30', style: TextStyle(fontSize: 16, color: DarkThemeColors.deactive), textAlign: TextAlign.center,),
-              title: Text('Subject: '+'\nTeacher: '+'\nClass:'+'', style: TextStyle(fontSize: 16, color: DarkThemeColors.white), textAlign: TextAlign.left),
+              leading: Text('8:30'+'\n10:00', style: TextStyle(fontSize: 15, color: DarkThemeColors.deactive), textAlign: TextAlign.center,),
+              title: Text('Математический анализ, '+ 'А-5', style: TextStyle(fontSize: 16, color: DarkThemeColors.white), textAlign: TextAlign.left),
+              subtitle: Text('Прохоров М.Н.', style: TextStyle(fontSize: 16, color: DarkThemeColors.deactive),),
               trailing: Icon(Icons.circle, color: DarkThemeColors.colorful01,),
             ),
           ],
